@@ -4,7 +4,7 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
 RUN apt-get update
 RUN apt-get -y install apache2 libapache2-mod-shib2 ssl-cert augeas-tools
 RUN a2enmod rewrite
-RUN a2enmod shib2
+RUN a2enmod shib
 RUN a2enmod proxy
 RUN a2enmod proxy_http
 ENV SP_HOSTNAME localhost
